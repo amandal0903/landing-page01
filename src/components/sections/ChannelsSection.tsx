@@ -643,7 +643,12 @@ export function ChannelsSection() {
               </div>
             ))}
           </div>
-          <a className="btn btn-p" href="#book-a-demo">
+          <a
+            className="btn btn-p"
+            href="https://calendly.com/avijitmandal2001/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Book a demo
           </a>
         </div>

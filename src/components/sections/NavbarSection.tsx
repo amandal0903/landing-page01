@@ -15,7 +15,12 @@ export function NavbarSection() {
           <a href="#security">Security</a>
           <a href="#faq">FAQ</a>
         </nav>
-        <a className="btn btn-p btn-sm nav-cta" href="#book-a-demo">
+        <a
+          className="btn btn-p btn-sm nav-cta"
+          href="https://calendly.com/avijitmandal2001/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Book a demo
         </a>
       </div>
