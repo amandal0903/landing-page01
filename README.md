@@ -39,3 +39,13 @@ npm run build
 ```
 
 Static output is generated in `out/`.
+
+## CI/CD (Auto-Deploy on Merge to `master` / `main`)
+
+Merges or pushes to `master` (or `main`) trigger `.github/workflows/deploy.yml`, which:
+1. Runs `npm ci`, `npm run typecheck`, `npm run lint`, and `npm run build`
+2. Authenticates to AWS via GitHub OIDC (`arn:aws:iam::551670267044:role/github-actions-landing-page01-deploy`)
+3. Syncs `out/` to S3 (`yourbrand-landing-page-551670267044`) and invalidates CloudFront (`E3ATV9RGH1UC0W`)
+
+Public URL: https://d18cslgwdmnhqb.cloudfront.net
+
