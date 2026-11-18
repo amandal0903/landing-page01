@@ -25,7 +25,7 @@ export function BrandLogo({
       width={size}
       height={size}
       className={className}
-      loading="lazy"
+      loading="eager"
       decoding="async"
     />
   );
