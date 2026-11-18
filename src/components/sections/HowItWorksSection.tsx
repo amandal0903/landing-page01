@@ -4,11 +4,11 @@ import React, { useCallback } from "react";
 import { useDemoRuntime } from "@/lib/demo-context";
 import { GridTiles } from "@/components/ui/GridTiles";
 import { Cursor } from "@/components/ui/Cursor";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 import {
   IconArrowUp,
   IconCheck,
   IconClock,
-  IconHash,
   IconMail,
   IconSpinner,
 } from "@/components/ui/Icons";
@@ -16,7 +16,7 @@ import {
 const HOW_TABS = [
   {
     num: "1",
-    title: "Teach YourBrand",
+    title: "Teach Reflex",
     sub: "Show it how, once.",
   },
   {
@@ -53,7 +53,7 @@ export function HowItWorksSection() {
             <span className="ln2">Trigger it.</span>
           </h2>
           <p className="lead">
-            Show YourBrand how once, watch it get it right, and start it from
+            Show Reflex how once, watch it get it right, and start it from
             wherever your team works.
           </p>
         </div>
@@ -102,7 +102,7 @@ export function HowItWorksSection() {
                 style={{ width: 700 }}
                 data-zoom="how"
                 role="img"
-                aria-label="A chat where someone teaches YourBrand a technical SEO audit and it tries the steps on three pages"
+                aria-label="A chat where someone teaches Reflex a technical SEO audit and it tries the steps on three pages"
               >
                 <div className="chrome">
                   <div className="dots">
@@ -116,22 +116,22 @@ export function HowItWorksSection() {
                 <div className="wb" style={{ height: 396 }}>
                   <div className="fill k-loop" style={{ animationDuration: "8000ms" }}>
                     <div className="ahead">
-                      <span className="ai">Y</span>
-                      <b>YourBrand</b>
+                      <span className="ai">R</span>
+                      <b>Reflex</b>
                       <span className="gr">New AI employee</span>
                       <span className="pill">Web</span>
                     </div>
                     <div className="chat">
                       <div className="sysline k-in" style={{ animationDelay: "150ms" }}>
-                        <span>YourBrand joined your team</span>
-                        <span className="gr">agent@inbox.yourbrand.ai</span>
+                        <span>Reflex joined your team</span>
+                        <span className="gr">agent@inbox.reflex.ai</span>
                       </div>
                       <div className="bub-me k-rise" style={{ animationDelay: "2950ms" }}>
                         Open each page. Check the title, meta description, canonical tag
                         and load time. Flag anything missing or slower than 3 seconds.
                       </div>
                       <div className="arow">
-                        <span className="ai s24">Y</span>
+                        <span className="ai s24">R</span>
                         <div className="aslot">
                           <span
                             className="dots3 k-win"
@@ -190,7 +190,7 @@ export function HowItWorksSection() {
                       </div>
                     </div>
                     <div className="tin">
-                      <span className="tin-ph">Teach YourBrand…</span>
+                      <span className="tin-ph">Teach Reflex…</span>
                       <div
                         className="tin-typed k-out"
                         style={{ animationDelay: "2850ms" }}
@@ -244,7 +244,7 @@ export function HowItWorksSection() {
                 style={{ width: 700 }}
                 data-zoom="how"
                 role="img"
-                aria-label="A five-step process canvas: YourBrand runs each step, waits for Maya to approve the report, then saves the SOP"
+                aria-label="A five-step process canvas: Reflex runs each step, waits for Maya to approve the report, then saves the SOP"
               >
                 <div className="chrome">
                   <div className="dots">
@@ -261,8 +261,8 @@ export function HowItWorksSection() {
                       <b>Technical SEO audit</b>
                       <span className="gr">Process canvas</span>
                       <span className="owners">
-                        <span className="ai s20">Y</span>
-                        <span>YourBrand</span>
+                        <span className="ai s20">R</span>
+                        <span>Reflex</span>
                         <span className="av s20">MC</span>
                         <span>Maya Chen</span>
                       </span>
@@ -298,7 +298,7 @@ export function HowItWorksSection() {
                           <span>An email with the subject “Run SEO audit”</span>
                         </span>
                         <span className="st-own">
-                          <span className="ai s20">Y</span>YourBrand
+                          <span className="ai s20">R</span>Reflex
                         </span>
                       </div>
 
@@ -332,7 +332,7 @@ export function HowItWorksSection() {
                           <span>Open every page in the browser</span>
                         </span>
                         <span className="st-own">
-                          <span className="ai s20">Y</span>YourBrand
+                          <span className="ai s20">R</span>Reflex
                         </span>
                       </div>
 
@@ -372,7 +372,7 @@ export function HowItWorksSection() {
                           <span>Title, meta description, canonical tag, load time</span>
                         </span>
                         <span className="st-own">
-                          <span className="ai s20">Y</span>YourBrand
+                          <span className="ai s20">R</span>Reflex
                         </span>
                       </div>
 
@@ -474,7 +474,7 @@ export function HowItWorksSection() {
                           <span>Reply with the fixes, one ticket per fix</span>
                         </span>
                         <span className="st-own">
-                          <span className="ai s20">Y</span>YourBrand
+                          <span className="ai s20">R</span>Reflex
                         </span>
                       </div>
                     </div>
@@ -582,7 +582,7 @@ export function HowItWorksSection() {
 
                       <div className="tcard iso">
                         <span className="tic">
-                          <IconHash />
+                          <BrandLogo domain="slack.com" size={18} />
                         </span>
                         <span className="tmain">
                           <b>Slack</b>

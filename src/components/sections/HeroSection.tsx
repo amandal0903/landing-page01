@@ -97,7 +97,7 @@ export function HeroSection() {
       <div className="wrap hero-grid">
         <div className="hero-copy">
           <h1 className="disp h1">
-            <span className="ln">Meet YourBrand.</span>
+            <span className="ln">Meet Reflex.</span>
             <span className="ln2">An AI employee for every process.</span>
           </h1>
           <p className="hero-sub">
@@ -127,7 +127,7 @@ export function HeroSection() {
             style={{ width: 584 }}
             data-zoom="hero"
             role="img"
-            aria-label="YourBrand picks up an email asking for four rate locks, locks the loans in a lender portal and replies with the confirmations"
+            aria-label="Reflex picks up an email asking for four rate locks, locks the loans in a lender portal and replies with the confirmations"
           >
             <div className="chrome">
               <div className="dots">
@@ -151,7 +151,7 @@ export function HeroSection() {
               </div>
               <div className="abadge k-in" style={{ animationDelay: "2400ms" }}>
                 <i />
-                YourBrand
+                Reflex
               </div>
             </div>
             <div className="wb" style={{ height: 408 }}>
@@ -166,7 +166,7 @@ export function HeroSection() {
                       style={{ animationDelay: "2900ms" }}
                     >
                       <BrandMarkMini />
-                      Picked up by YourBrand
+                      Picked up by Reflex
                     </span>
                   </div>
                   <div className="msg">
@@ -237,10 +237,10 @@ export function HeroSection() {
                       className="msg k-rise"
                       style={{ animationDelay: "12400ms" }}
                     >
-                      <span className="ai s32">Y</span>
+                      <span className="ai s32">R</span>
                       <div className="mmain">
                         <div className="mmeta">
-                          <b>YourBrand</b>
+                          <b>Reflex</b>
                           <span className="tag">AI</span>
                           <span>to Dana Ruiz</span>
                           <span className="when">8:17 AM</span>

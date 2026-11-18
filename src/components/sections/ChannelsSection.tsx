@@ -3,6 +3,7 @@
 import React, { useCallback } from "react";
 import { useDemoRuntime } from "@/lib/demo-context";
 import { BrandMarkMini } from "@/components/ui/BrandMark";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 import {
   IconCheck,
   IconChevronLeft,
@@ -15,16 +16,15 @@ import {
   IconMail,
   IconSpreadsheet,
   IconTextBubble,
-  IconWhatsApp,
 } from "@/components/ui/Icons";
 
 const CHANNEL_TABS = [
-  { label: "Email", icon: IconMail },
-  { label: "Slack", icon: IconHash },
-  { label: "Text", icon: IconTextBubble },
-  { label: "WhatsApp", icon: IconWhatsApp },
-  { label: "Schedule", icon: IconClock },
-  { label: "API", icon: IconCode },
+  { label: "Email", icon: IconMail, logoDomain: null },
+  { label: "Slack", icon: null, logoDomain: "slack.com" },
+  { label: "Text", icon: IconTextBubble, logoDomain: null },
+  { label: "WhatsApp", icon: null, logoDomain: "whatsapp.com" },
+  { label: "Schedule", icon: IconClock, logoDomain: null },
+  { label: "API", icon: IconCode, logoDomain: null },
 ] as const;
 
 const CHANNEL_COPY = [
@@ -70,13 +70,13 @@ export function ChannelsSection() {
     <section className="sec" id="channels">
       <div className="wrap">
         <div className="intro">
-          <p className="eyebrow">Ask YourBrand</p>
+          <p className="eyebrow">Ask Reflex</p>
           <h2 className="disp h2">
             <span className="ln">Ask for the work</span>
             <span className="ln2">where your team already talks.</span>
           </h2>
           <p className="lead">
-            Email it. Slack it. Text it. Or put it on a schedule. YourBrand
+            Email it. Slack it. Text it. Or put it on a schedule. Reflex
             delivers the finished work to you, your boss, or whoever keeps
             asking ‘any update?’
           </p>
@@ -95,7 +95,11 @@ export function ChannelsSection() {
                 data-ch={idx}
                 onClick={() => selectCh(idx)}
               >
-                <Icon />
+                {tab.logoDomain ? (
+                  <BrandLogo domain={tab.logoDomain} size={16} />
+                ) : Icon ? (
+                  <Icon />
+                ) : null}
                 <span>{tab.label}</span>
               </button>
             );
@@ -118,7 +122,7 @@ export function ChannelsSection() {
                 className="win chv"
                 data-zoom="ch"
                 role="img"
-                aria-label="An email asking for rate locks is picked up by YourBrand, which replies in the same thread with the confirmations attached"
+                aria-label="An email asking for rate locks is picked up by Reflex, which replies in the same thread with the confirmations attached"
               >
                 <div className="fill k-loop" style={{ animationDuration: "9000ms" }}>
                   <div className="thead">
@@ -130,7 +134,7 @@ export function ChannelsSection() {
                       style={{ animationDelay: "1100ms" }}
                     >
                       <BrandMarkMini />
-                      Picked up by YourBrand
+                      Picked up by Reflex
                     </span>
                   </div>
                   <div className="msg k-rise" style={{ animationDelay: "300ms" }}>
@@ -201,10 +205,10 @@ export function ChannelsSection() {
                       className="msg k-rise"
                       style={{ animationDelay: "4200ms" }}
                     >
-                      <span className="ai s32">Y</span>
+                      <span className="ai s32">R</span>
                       <div className="mmain">
                         <div className="mmeta">
-                          <b>YourBrand</b>
+                          <b>Reflex</b>
                           <span className="tag">AI</span>
                           <span>to Dana Ruiz</span>
                           <span className="when">8:17 AM</span>
@@ -231,10 +235,11 @@ export function ChannelsSection() {
                 className="win chv"
                 data-zoom="ch"
                 role="img"
-                aria-label="In a Slack-style channel, YourBrand is asked to post this week's supplier invoices to SAP, reacts, posts 42 and flags two for approval"
+                aria-label="In a Slack-style channel, Reflex is asked to post this week's supplier invoices to SAP, reacts, posts 42 and flags two for approval"
               >
                 <div className="fill k-loop" style={{ animationDuration: "9500ms" }}>
                   <div className="slh">
+                    <BrandLogo domain="slack.com" size={16} />
                     <IconHash />
                     <b>finance-ops</b>
                     <span className="gr">8 members</span>
@@ -248,7 +253,7 @@ export function ChannelsSection() {
                           <span>9:12 AM</span>
                         </div>
                         <p>
-                          <span className="mention">@YourBrand</span> post this
+                          <span className="mention">@Reflex</span> post this
                           week&apos;s supplier invoices to SAP
                         </p>
                         <span
@@ -262,10 +267,10 @@ export function ChannelsSection() {
                     <div className="slthread k-in" style={{ animationDelay: "1400ms" }}>
                       <span className="sltl">1 reply</span>
                       <div className="slm">
-                        <span className="ai s32">Y</span>
+                        <span className="ai s32">R</span>
                         <div className="slmain">
                           <div className="mmeta">
-                            <b>YourBrand</b>
+                            <b>Reflex</b>
                             <span className="tag">AI</span>
                             <span>9:12 AM</span>
                           </div>
@@ -339,14 +344,14 @@ export function ChannelsSection() {
                 className="win chv chv-clear"
                 data-zoom="ch"
                 role="img"
-                aria-label="A text message thread: someone asks about the Acme invoice and YourBrand replies that it is on hold and will be resent by Friday"
+                aria-label="A text message thread: someone asks about the Acme invoice and Reflex replies that it is on hold and will be resent by Friday"
               >
                 <div className="phone">
                   <div className="ph-head">
                     <IconChevronLeft />
-                    <span className="ai">Y</span>
+                    <span className="ai">R</span>
                     <span className="ph-name">
-                      <b>YourBrand</b>
+                      <b>Reflex</b>
                       <span>AI employee</span>
                     </span>
                   </div>
@@ -386,14 +391,14 @@ export function ChannelsSection() {
                 className="win chv chv-clear"
                 data-zoom="ch"
                 role="img"
-                aria-label="A WhatsApp-style chat: someone asks YourBrand to pull today's rate sheets and it replies with six portals checked and the sheet attached"
+                aria-label="A WhatsApp-style chat: someone asks Reflex to pull today's rate sheets and it replies with six portals checked and the sheet attached"
               >
                 <div className="phone ph-wa">
                   <div className="ph-head">
                     <IconChevronLeft />
-                    <span className="ai">Y</span>
+                    <span className="ai">R</span>
                     <span className="ph-name">
-                      <b>YourBrand</b>
+                      <b>Reflex</b>
                       <span>online</span>
                     </span>
                   </div>
@@ -565,11 +570,11 @@ export function ChannelsSection() {
                     style={{
                       animationDelay: "300ms",
                       animationDuration: "1300ms",
-                      animationTimingFunction: "steps(51, end)",
+                      animationTimingFunction: "steps(48, end)",
                     }}
                   >
                     <span className="t-p">$</span> curl -X POST
-                    https://api.yourbrand.ai/v1/runs \
+                    https://api.reflex.ai/v1/runs \
                   </span>
                   <span
                     className="tl ind2 k-type"

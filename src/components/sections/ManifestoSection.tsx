@@ -62,13 +62,13 @@ export function ManifestoSection() {
     <section className="sec">
       <div className="wrap">
         <p className="disp statement">
-          Your team already knows the work. With YourBrand, you describe it once
+          Your team already knows the work. With Reflex, you describe it once
           and it runs every day.
         </p>
         <div className="mf2">
           <h2 className="disp h3">
-            <span className="ln">Things teams ask YourBrand to do</span>
-            <span className="ln2">You type it, YourBrand does it</span>
+            <span className="ln">Things teams ask Reflex to do</span>
+            <span className="ln2">You type it, Reflex does it</span>
           </h2>
           <div
             ref={cmdRef}
@@ -78,7 +78,7 @@ export function ManifestoSection() {
             role="img"
             aria-label="A command bar where one task after another is typed, run and marked done"
           >
-            <span className="ai">Y</span>
+            <span className="ai">R</span>
             <div className="cmd-tx">
               {COMMANDS.map((cmd, idx) => (
                 <span

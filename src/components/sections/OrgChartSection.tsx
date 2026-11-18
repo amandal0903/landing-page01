@@ -42,7 +42,7 @@ export function OrgChartSection() {
           data-root="org"
           data-scene="org"
           role="img"
-          aria-label="An org chart of people and AI employees across finance, web and engineering. Dev hands the Check each page step to YourBrand, which checks 14 pages and asks Atlas to open three tickets"
+          aria-label="An org chart of people and AI employees across finance, web and engineering. Dev hands the Check each page step to Reflex, which checks 14 pages and asks Atlas to open three tickets"
         >
           <div className="org-top">
             <div className="oc oc-top">
@@ -151,7 +151,7 @@ export function OrgChartSection() {
                     className="oc-st k-in"
                     style={{ animationDelay: "2600ms" }}
                   >
-                    Handed ‘Check each page’ to YourBrand
+                    Handed ‘Check each page’ to Reflex
                   </span>
                 </div>
               </div>
@@ -167,10 +167,10 @@ export function OrgChartSection() {
                   }}
                 />
                 <div className="oc-r1">
-                  <span className="ai s32">Y</span>
+                  <span className="ai s32">R</span>
                   <span className="oc-nm">
                     <b>
-                      YourBrand<span className="tag">AI</span>
+                      Reflex<span className="tag">AI</span>
                     </b>
                     <span>SEO checks</span>
                   </span>
@@ -287,8 +287,8 @@ export function OrgChartSection() {
             >
               <div className="hc k-rise" style={{ animationDelay: "5200ms" }}>
                 <div className="hc-h">
-                  <span className="ai s20">Y</span>
-                  <b>YourBrand</b>
+                  <span className="ai s20">R</span>
+                  <b>Reflex</b>
                   <IconArrowRight />
                   <span className="ai s20">A</span>
                   <b>Atlas</b>
@@ -322,8 +322,8 @@ export function OrgChartSection() {
                   <span className="ai s20">A</span>
                   <b>Atlas</b>
                   <IconArrowRight />
-                  <span className="ai s20">Y</span>
-                  <b>YourBrand</b>
+                  <span className="ai s20">R</span>
+                  <b>Reflex</b>
                 </div>
                 <p className="hc-t">
                   Opened{" "}

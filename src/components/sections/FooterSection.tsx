@@ -9,7 +9,7 @@ export function FooterSection() {
           <div className="foot-brand">
             <a className="logo" href="#top">
               <BrandMark />
-              <span>YourBrand</span>
+              <span>Reflex</span>
             </a>
             <p>AI employees for enterprise software.</p>
           </div>
@@ -49,7 +49,7 @@ export function FooterSection() {
         </div>
         <div className="foot-legal">
           <p>
-            <span>© 2026 YourBrand, Inc.</span>
+            <span>© 2026 Reflex, Inc.</span>
             <span>[address]</span>
           </p>
           <div className="foot-links">

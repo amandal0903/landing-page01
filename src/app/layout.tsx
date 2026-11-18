@@ -11,7 +11,7 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "YourBrand — An AI employee for every process",
+  title: "Reflex — An AI employee for every process",
   description:
     "Teach it your process once. It runs every time, in the systems you already use.",
 };

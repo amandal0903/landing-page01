@@ -27,7 +27,7 @@ export function Cursor({ className, initialTransform, human }: CursorProps) {
       ) : (
         <span className="cur-tag">
           <BrandMarkCursor />
-          YourBrand
+          Reflex
         </span>
       )}
     </div>

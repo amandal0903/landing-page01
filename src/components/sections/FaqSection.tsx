@@ -11,7 +11,7 @@ const FAQS = [
   },
   {
     q: "Do we need APIs or an integration project?",
-    a: "No. YourBrand uses the same screens your team uses. If your team does it on a computer, YourBrand can do it.",
+    a: "No. Reflex uses the same screens your team uses. If your team does it on a computer, Reflex can do it.",
   },
   {
     q: "What happens when a website changes?",
@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: "How often does it get things wrong?",
-    a: "Routine cases run on their own. When a case falls outside the rules, or YourBrand is not confident, it stops and sends the case to a person with the run attached.",
+    a: "Routine cases run on their own. When a case falls outside the rules, or Reflex is not confident, it stops and sends the case to a person with the run attached.",
   },
   {
     q: "How long until it is live?",

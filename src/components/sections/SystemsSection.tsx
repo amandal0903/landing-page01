@@ -3,6 +3,7 @@
 import React, { useCallback } from "react";
 import { useDemoRuntime } from "@/lib/demo-context";
 import { BrandMarkMini } from "@/components/ui/BrandMark";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 import { GridTiles } from "@/components/ui/GridTiles";
 import { Cursor } from "@/components/ui/Cursor";
 import {
@@ -18,7 +19,7 @@ const SYSTEM_ITEMS = [
   {
     name: "Web portals",
     tag: "Investor, carrier, tax",
-    desc: "Stored credentials, one-time codes from a shared inbox, a new layout every quarter. YourBrand handles all of it and keeps going.",
+    desc: "Stored credentials, one-time codes from a shared inbox, a new layout every quarter. Reflex handles all of it and keeps going.",
   },
   {
     name: "Encompass",
@@ -205,26 +206,26 @@ const ERP_RIPPLES = [
 ] as const;
 
 const APPS = [
-  "SAP",
-  "Oracle",
-  "NetSuite",
-  "Workday",
-  "Coupa",
-  "QuickBooks",
-  "Zoho Books",
-  "Salesforce",
-  "ServiceNow",
-  "Encompass",
-  "Optimal Blue",
-  "Applied Epic",
-  "Veeva",
-  "Adobe",
-  "Gmail",
-  "Outlook",
-  "Excel",
-  "OneDrive",
-  "Slack",
-  "Telegram",
+  { name: "SAP", domain: "sap.com" },
+  { name: "Oracle", domain: "oracle.com" },
+  { name: "NetSuite", domain: "netsuite.com" },
+  { name: "Workday", domain: "workday.com" },
+  { name: "Coupa", domain: "coupa.com" },
+  { name: "QuickBooks", domain: "quickbooks.intuit.com" },
+  { name: "Zoho Books", domain: "zoho.com" },
+  { name: "Salesforce", domain: "salesforce.com" },
+  { name: "ServiceNow", domain: "servicenow.com" },
+  { name: "Encompass", domain: "icemortgagetechnology.com" },
+  { name: "Optimal Blue", domain: "optimalblue.com" },
+  { name: "Applied Epic", domain: "appliedsystems.com" },
+  { name: "Veeva", domain: "veeva.com" },
+  { name: "Adobe", domain: "adobe.com" },
+  { name: "Gmail", domain: "gmail.com" },
+  { name: "Outlook", domain: "outlook.com" },
+  { name: "Excel", domain: "microsoft.com" },
+  { name: "OneDrive", domain: "onedrive.com" },
+  { name: "Slack", domain: "slack.com" },
+  { name: "Telegram", domain: "telegram.org" },
 ] as const;
 
 export function SystemsSection() {
@@ -301,7 +302,7 @@ export function SystemsSection() {
                   style={{ width: 700 }}
                   data-zoom="sys"
                   role="img"
-                  aria-label="YourBrand checks five loans in a lender portal one by one, logs each, and flags loan 04820 for a missing W-2"
+                  aria-label="Reflex checks five loans in a lender portal one by one, logs each, and flags loan 04820 for a missing W-2"
                 >
                   <div className="chrome">
                     <div className="dots">
@@ -315,7 +316,7 @@ export function SystemsSection() {
                     </div>
                     <div className="abadge">
                       <i />
-                      YourBrand
+                      Reflex
                     </div>
                   </div>
                   <div className="wb" style={{ height: 416 }}>
@@ -445,7 +446,7 @@ export function SystemsSection() {
                                   }}
                                 >
                                   <BrandMarkMini />
-                                  Checked by YourBrand
+                                  Checked by Reflex
                                 </span>
                               </div>
                             );
@@ -630,7 +631,7 @@ export function SystemsSection() {
                   style={{ width: 700 }}
                   data-zoom="sys"
                   role="img"
-                  aria-label="A loan file in a loan origination system: YourBrand ticks off six conditions one by one"
+                  aria-label="A loan file in a loan origination system: Reflex ticks off six conditions one by one"
                 >
                   <div className="chrome">
                     <div className="dots">
@@ -644,7 +645,7 @@ export function SystemsSection() {
                     </div>
                     <div className="abadge">
                       <i />
-                      YourBrand
+                      Reflex
                     </div>
                   </div>
                   <div className="wb" style={{ height: 416 }}>
@@ -734,7 +735,7 @@ export function SystemsSection() {
                     </div>
                     <div className="abadge">
                       <i />
-                      YourBrand
+                      Reflex
                     </div>
                   </div>
                   <div className="wb" style={{ height: 416 }}>
@@ -853,7 +854,7 @@ export function SystemsSection() {
                     </div>
                     <div className="abadge">
                       <i />
-                      YourBrand
+                      Reflex
                     </div>
                   </div>
                   <div className="wb" style={{ height: 416 }}>
@@ -1007,7 +1008,7 @@ export function SystemsSection() {
                   style={{ width: 700 }}
                   data-zoom="sys"
                   role="img"
-                  aria-label="A PDF invoice on the left and a spreadsheet on the right: YourBrand highlights each value on the invoice and fills the matching cell"
+                  aria-label="A PDF invoice on the left and a spreadsheet on the right: Reflex highlights each value on the invoice and fills the matching cell"
                 >
                   <div className="chrome">
                     <div className="dots">
@@ -1021,7 +1022,7 @@ export function SystemsSection() {
                     </div>
                     <div className="abadge">
                       <i />
-                      YourBrand
+                      Reflex
                     </div>
                   </div>
                   <div className="wb" style={{ height: 416 }}>
@@ -1240,7 +1241,8 @@ export function SystemsSection() {
           <div className="mq-track" style={{ animationDuration: "70s" }}>
             {repeatedApps.map((app, idx) => (
               <span key={idx} className="app">
-                {app}
+                <BrandLogo domain={app.domain} size={18} />
+                {app.name}
               </span>
             ))}
           </div>

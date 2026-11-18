@@ -7,7 +7,7 @@ export function NavbarSection() {
       <div className="wrap nav-in">
         <a className="logo" href="#top">
           <BrandMark />
-          <span>YourBrand</span>
+          <span>Reflex</span>
         </a>
         <nav className="nav-links" aria-label="Main">
           <a href="#how">How it works</a>
