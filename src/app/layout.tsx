@@ -1,17 +1,36 @@
 import type { Metadata } from "next";
-import { Instrument_Sans } from "next/font/google";
+import {
+  Hanken_Grotesk,
+  JetBrains_Mono,
+  Newsreader,
+} from "next/font/google";
 import "./globals.css";
 
-const instrumentSans = Instrument_Sans({
+const newsreader = Newsreader({
   subsets: ["latin"],
   weight: "variable",
-  axes: ["wdth"],
-  variable: "--font-instrument-sans",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
+  variable: "--font-newsreader",
+  display: "swap",
+});
+
+const hankenGrotesk = Hanken_Grotesk({
+  subsets: ["latin"],
+  weight: "variable",
+  variable: "--font-hanken-grotesk",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: "variable",
+  variable: "--font-jetbrains-mono",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Reflex — An AI employee for every process",
+  title: "Reflex — AI employees for every process",
   description:
     "Teach it your process once. It runs every time, in the systems you already use.",
 };
@@ -22,7 +41,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={instrumentSans.variable}>
+    <html
+      lang="en"
+      className={`${newsreader.variable} ${hankenGrotesk.variable} ${jetbrainsMono.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

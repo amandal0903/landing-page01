@@ -18,9 +18,17 @@ export default function HomePage() {
   return (
     <DemoProvider>
       <div
-        className="page"
         id="top"
-        style={{ "--hi": "#FFE15C" } as React.CSSProperties}
+        className="lp"
+        style={
+          {
+            "--accent": "#D97757",
+            background: "#FAF9F5",
+            color: "#141413",
+            fontSize: 16,
+            lineHeight: 1.5,
+          } as React.CSSProperties
+        }
       >
         <BannerSection />
         <NavbarSection />

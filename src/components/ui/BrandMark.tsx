@@ -1,46 +1,65 @@
 import React from "react";
 
-export function BrandMark() {
+export function BrandMark({
+  size = 26,
+  style,
+}: {
+  size?: number;
+  style?: React.CSSProperties;
+}) {
   return (
-    <svg className="mark" viewBox="0 0 24 24" aria-hidden="true">
-      <rect width="24" height="24" rx="6.5" fill="#1A1A18" />
-      <rect
-        x="5.5"
-        y="7"
-        width="8"
-        height="2.6"
-        rx="1.3"
-        fill="#FFFFFF"
-        opacity="0.55"
-      />
-      <rect className="mark-hi" x="5.5" y="12.2" width="13" height="5" rx="1.6" />
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 26 26"
+      aria-hidden="true"
+      style={style}
+    >
+      <rect width="26" height="26" rx="7" fill="#141413" />
+      <path d="M8.6 7.3 18.5 12.7 13.9 13.9 11.8 18.5Z" fill="#FAF9F5" />
     </svg>
   );
 }
 
-export function BrandMarkMini() {
+export function BrandMarkInverted({
+  style,
+}: {
+  style?: React.CSSProperties;
+}) {
   return (
-    <svg className="mark mk12" viewBox="0 0 24 24" aria-hidden="true">
-      <rect width="24" height="24" rx="6.5" fill="#1A1A18" />
-      <rect className="mark-hi" x="5.5" y="12.2" width="13" height="5" rx="1.6" />
+    <svg viewBox="0 0 26 26" aria-hidden="true" style={style}>
+      <rect width="26" height="26" rx="7" fill="#FAF9F5" />
+      <path d="M8.6 7.3 18.5 12.7 13.9 13.9 11.8 18.5Z" fill="#141413" />
     </svg>
   );
 }
 
-export function BrandMarkCursor() {
+export function BrandMarkAvatar({
+  size = "2em",
+  radius = ".48em",
+}: {
+  size?: string;
+  radius?: string;
+}) {
   return (
-    <svg className="mark mk14" viewBox="0 0 24 24" aria-hidden="true">
-      <rect width="24" height="24" rx="6.5" fill="#1A1A18" />
-      <rect
-        x="5.5"
-        y="7"
-        width="8"
-        height="2.6"
-        rx="1.3"
-        fill="#FFFFFF"
-        opacity="0.55"
-      />
-      <rect x="5.5" y="12.2" width="13" height="5" rx="1.6" fill="#FFFFFF" />
-    </svg>
+    <span
+      style={{
+        flex: "none",
+        display: "grid",
+        placeItems: "center",
+        width: size,
+        height: size,
+        borderRadius: radius,
+        background: "#141413",
+      }}
+    >
+      <svg
+        viewBox="0 0 26 26"
+        aria-hidden="true"
+        style={{ width: "72%", height: "72%" }}
+      >
+        <path d="M8.6 7.3 18.5 12.7 13.9 13.9 11.8 18.5Z" fill="#FAF9F5" />
+      </svg>
+    </span>
   );
 }

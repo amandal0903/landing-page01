@@ -2,7 +2,6 @@
 
 import React from "react";
 import { useDemoRuntime } from "@/lib/demo-context";
-import { IconPlus } from "@/components/ui/Icons";
 
 const FAQS = [
   {
@@ -32,33 +31,106 @@ const FAQS = [
 ] as const;
 
 export function FaqSection() {
-  const { faqIndex, toggleFaq } = useDemoRuntime();
+  const { faq, pickFaq } = useDemoRuntime();
 
   return (
-    <section className="sec" id="faq">
-      <div className="wrap">
-        <h2 className="disp h2">
-          <span className="ln">Questions teams</span>
-          <span className="ln2">ask first.</span>
+    <section
+      id="faq"
+      aria-labelledby="faq-h"
+      style={{
+        padding: "clamp(72px,8vw,112px) 0 clamp(112px,12vw,168px)",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "0 clamp(20px,4vw,40px)",
+        }}
+      >
+        <h2
+          id="faq-h"
+          className="serif reveal"
+          style={{
+            fontSize: "clamp(36px,4.3vw,58px)",
+            fontWeight: 400,
+            lineHeight: 1.06,
+            letterSpacing: "-.016em",
+          }}
+        >
+          <span style={{ display: "block" }}>Questions teams</span>
+          <span style={{ display: "block", color: "#82817A" }}>ask first.</span>
         </h2>
-        <div className="faq-list">
+
+        <div
+          className="reveal"
+          style={{
+            marginTop: "clamp(40px,5vw,60px)",
+            borderBottom: "1px solid rgba(31,30,29,.12)",
+          }}
+        >
           {FAQS.map((item, idx) => {
-            const open = faqIndex === idx;
+            const expanded = faq === idx;
             return (
-              <div key={item.q} className={`faq-item${open ? " open" : ""}`}>
-                <button
-                  type="button"
-                  className="faq-q"
-                  aria-expanded={open}
-                  data-faq={idx}
-                  onClick={() => toggleFaq(idx)}
+              <div
+                key={item.q}
+                style={{ borderTop: "1px solid rgba(31,30,29,.12)" }}
+              >
+                <h3 className="acc-h" style={{ margin: 0 }}>
+                  <button
+                    className="acc-btn"
+                    type="button"
+                    aria-expanded={expanded}
+                    aria-controls={`faq-a${idx}`}
+                    onClick={() => pickFaq(idx)}
+                    style={{ minHeight: 84, padding: "24px 2px" }}
+                  >
+                    <span
+                      className="serif"
+                      style={{
+                        fontSize: "clamp(20px,1.9vw,25px)",
+                        fontWeight: 400,
+                        lineHeight: 1.3,
+                        letterSpacing: "-.006em",
+                      }}
+                    >
+                      {item.q}
+                    </span>
+                    <span className="acc-ico" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                        style={{ flex: "none", width: 14, height: 14 }}
+                      >
+                        <path d="M8 3v10M3 8h10" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3>
+                <div
+                  className="acc-body"
+                  id={`faq-a${idx}`}
+                  role="region"
+                  aria-hidden={!expanded}
                 >
-                  <span>{item.q}</span>
-                  <IconPlus className="ic faq-x" />
-                </button>
-                <div className="faq-a">
-                  <div className="faq-in">
-                    <p>{item.a}</p>
+                  <div>
+                    <p
+                      style={{
+                        maxWidth: 760,
+                        padding: "0 64px 28px 2px",
+                        fontSize: 17,
+                        lineHeight: 1.65,
+                        color: "#5E5D59",
+                        textWrap: "pretty",
+                      }}
+                    >
+                      {item.a}
+                    </p>
                   </div>
                 </div>
               </div>
