@@ -227,19 +227,28 @@ export function ChannelsSection() {
           ))}
 
           <div style={{ position: "relative" }}>
+            <div
+              aria-hidden="true"
+              style={{
+                position: "relative",
+                width: "40em",
+                height: "28em",
+                margin: "0 auto",
+                display: "grid",
+                placeItems: "center",
+                fontSize: "min(12.5px,calc(100cqw / 40))",
+                color: "#141413",
+                lineHeight: 1.35,
+                textAlign: "left",
+                pointerEvents: "none",
+              }}
+            >
             {ch === 0 && (
               <div
-                aria-hidden="true"
                 style={{
                   position: "relative",
                   width: "40em",
                   height: "22em",
-                  margin: "0 auto",
-                  fontSize: "min(12.5px,calc(100cqw / 40))",
-                  color: "#141413",
-                  lineHeight: 1.35,
-                  textAlign: "left",
-                  pointerEvents: "none",
                 }}
               >
                 <div
@@ -415,17 +424,10 @@ export function ChannelsSection() {
 
             {ch === 1 && (
               <div
-                aria-hidden="true"
                 style={{
                   position: "relative",
                   width: "40em",
                   height: "22em",
-                  margin: "0 auto",
-                  fontSize: "min(12.5px,calc(100cqw / 40))",
-                  color: "#141413",
-                  lineHeight: 1.35,
-                  textAlign: "left",
-                  pointerEvents: "none",
                 }}
               >
                 <div
@@ -649,540 +651,497 @@ export function ChannelsSection() {
 
             {ch === 2 && (
               <div
-                aria-hidden="true"
                 style={{
                   position: "relative",
-                  width: "40em",
-                  height: "33.5em",
-                  margin: "0 auto",
-                  fontSize: "min(12.5px,calc(100cqw / 40))",
-                  color: "#141413",
-                  lineHeight: 1.35,
-                  textAlign: "left",
-                  pointerEvents: "none",
+                  width: "14em",
+                  height: "28em",
+                  borderRadius: "2.35em",
+                  background: "#1C1C1A",
+                  padding: ".36em",
+                  boxShadow:
+                    "0 0 0 1px rgba(255,255,255,.14) inset,0 24px 48px -20px rgba(20,20,19,.36),0 8px 18px -10px rgba(20,20,19,.2)",
                 }}
               >
+                {/* Hardware side buttons */}
+                <span className="abs" style={{ left: "-.12em", top: "4.4em", width: ".12em", height: "1.2em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
+                <span className="abs" style={{ left: "-.12em", top: "6.3em", width: ".12em", height: "1.9em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
+                <span className="abs" style={{ left: "-.12em", top: "8.7em", width: ".12em", height: "1.9em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
+                <span className="abs" style={{ right: "-.12em", top: "7em", width: ".12em", height: "2.7em", borderRadius: "0 .1em .1em 0", background: "#2E2E2B" }} />
+
+                {/* Inner screen */}
                 <div
+                  className="x-loop"
                   style={{
-                    position: "absolute",
-                    left: "50%",
-                    top: "0.15em",
-                    width: "16.6em",
-                    height: "33.2em",
-                    marginLeft: "-8.3em",
-                    borderRadius: "2.8em",
-                    background: "#1C1C1A",
-                    padding: ".42em",
-                    boxShadow:
-                      "0 0 0 1px rgba(255,255,255,.14) inset,0 28px 56px -22px rgba(20,20,19,.38),0 8px 20px -10px rgba(20,20,19,.22)",
+                    position: "relative",
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "2em",
+                    overflow: "hidden",
+                    background: "#FFFFFF",
                   }}
                 >
-                  {/* Hardware side buttons */}
-                  <span className="abs" style={{ left: "-.14em", top: "5.2em", width: ".14em", height: "1.4em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
-                  <span className="abs" style={{ left: "-.14em", top: "7.4em", width: ".14em", height: "2.3em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
-                  <span className="abs" style={{ left: "-.14em", top: "10.2em", width: ".14em", height: "2.3em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
-                  <span className="abs" style={{ right: "-.14em", top: "8.2em", width: ".14em", height: "3.2em", borderRadius: "0 .1em .1em 0", background: "#2E2E2B" }} />
-
-                  {/* Inner screen */}
+                  {/* iOS status bar + Dynamic Island */}
                   <div
-                    className="x-loop"
+                    className="abs"
                     style={{
-                      position: "relative",
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: "2.38em",
-                      overflow: "hidden",
+                      left: 0,
+                      right: 0,
+                      top: 0,
+                      height: "2em",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      padding: ".25em 1em 0",
+                      background: "#FAF9F5",
+                    }}
+                  >
+                    <span style={{ fontSize: ".6em", fontWeight: 600, letterSpacing: "-.01em" }}>9:41</span>
+                    <span
+                      style={{
+                        width: "3.9em",
+                        height: "1em",
+                        borderRadius: ".8em",
+                        background: "#141413",
+                      }}
+                    />
+                    <span style={{ display: "flex", alignItems: "center", gap: ".24em" }}>
+                      <svg viewBox="0 0 14 10" fill="currentColor" style={{ width: ".74em", height: ".52em" }}>
+                        <rect x="0" y="6" width="2" height="4" rx=".5" />
+                        <rect x="3.5" y="4.2" width="2" height="5.8" rx=".5" />
+                        <rect x="7" y="2.2" width="2" height="7.8" rx=".5" />
+                        <rect x="10.5" y="0" width="2" height="10" rx=".5" />
+                      </svg>
+                      <svg viewBox="0 0 18 10" fill="none" style={{ width: "1em", height: ".56em" }}>
+                        <rect x=".6" y=".8" width="14" height="8.4" rx="2.2" stroke="currentColor" strokeWidth="1.1" opacity=".55" />
+                        <rect x="2" y="2.2" width="10.5" height="5.6" rx="1" fill="currentColor" />
+                        <path d="M16 3.6v2.8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" opacity=".55" />
+                      </svg>
+                    </span>
+                  </div>
+
+                  {/* App navigation header */}
+                  <div
+                    className="abs"
+                    style={{
+                      left: 0,
+                      right: 0,
+                      top: "2em",
+                      height: "2.75em",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: ".45em",
+                      padding: "0 .8em",
+                      borderBottom: "1px solid rgba(31,30,29,.09)",
+                      background: "#FAF9F5",
+                    }}
+                  >
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      stroke="#007AFF"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      style={{ flex: "none", width: ".9em", height: ".9em" }}
+                    >
+                      <path d="M10 3 5 8l5 5" />
+                    </svg>
+                    <BrandMarkAvatar size="1.55em" radius=".44em" />
+                    <span style={{ display: "flex", flexDirection: "column", lineHeight: 1.2 }}>
+                      <span style={{ fontSize: ".78em", fontWeight: 600 }}>Reflex</span>
+                      <span style={{ fontSize: ".58em", color: "#6B6A64" }}>
+                        Text · +1 (555) 010-0199
+                      </span>
+                    </span>
+                  </div>
+
+                  {/* Chat bubbles */}
+                  <div
+                    className="abs x-q"
+                    style={{
+                      right: ".75em",
+                      top: "5.8em",
+                      maxWidth: "9.8em",
+                      padding: ".52em .72em",
+                      borderRadius: "1em 1em .28em 1em",
+                      background: "#007AFF",
+                      color: "#FFFFFF",
+                    }}
+                  >
+                    <span className="wrap" style={{ fontSize: ".76em", whiteSpace: "normal", display: "block" }}>
+                      Any update on the Acme invoice?
+                    </span>
+                  </div>
+                  <div className="abs x-read" style={{ right: ".85em", top: "9.15em", color: "#6B6A64" }}>
+                    <span style={{ fontSize: ".58em" }}>Read 9:42 AM</span>
+                  </div>
+                  <div
+                    className="abs x-dots"
+                    style={{
+                      left: ".75em",
+                      top: "10.6em",
+                      display: "flex",
+                      gap: ".26em",
+                      padding: ".65em .8em",
+                      borderRadius: "1em 1em 1em .28em",
+                      background: "#F0EEE6",
+                    }}
+                  >
+                    <span className="t-dot" style={{ width: ".35em", height: ".35em", borderRadius: "50%", background: "#9C9A92", animationDelay: "0s" }} />
+                    <span className="t-dot" style={{ width: ".35em", height: ".35em", borderRadius: "50%", background: "#9C9A92", animationDelay: ".15s" }} />
+                    <span className="t-dot" style={{ width: ".35em", height: ".35em", borderRadius: "50%", background: "#9C9A92", animationDelay: ".3s" }} />
+                  </div>
+                  <div
+                    className="abs x-a"
+                    style={{
+                      left: ".75em",
+                      top: "10.6em",
+                      maxWidth: "10.3em",
+                      padding: ".52em .72em",
+                      borderRadius: "1em 1em 1em .28em",
+                      background: "#F0EEE6",
+                    }}
+                  >
+                    <span className="wrap" style={{ fontSize: ".76em", whiteSpace: "normal", display: "block" }}>
+                      Told Acme it&apos;s on hold. They&apos;ll resend by Friday.
+                    </span>
+                  </div>
+
+                  {/* Input bar + Home indicator */}
+                  <div
+                    className="abs"
+                    style={{
+                      left: ".7em",
+                      right: ".7em",
+                      bottom: "1.2em",
+                      height: "2.05em",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      padding: "0 .28em 0 .75em",
+                      border: "1px solid rgba(31,30,29,.14)",
+                      borderRadius: "1.05em",
                       background: "#FFFFFF",
                     }}
                   >
-                    {/* iOS status bar + Dynamic Island */}
-                    <div
-                      className="abs"
+                    <span style={{ fontSize: ".7em", color: "#87867F" }}>Text message</span>
+                    <span
                       style={{
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        height: "2.35em",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        padding: ".3em 1.2em 0",
-                        background: "#FAF9F5",
-                      }}
-                    >
-                      <span style={{ fontSize: ".68em", fontWeight: 600, letterSpacing: "-.01em" }}>9:41</span>
-                      <span
-                        style={{
-                          width: "4.6em",
-                          height: "1.18em",
-                          borderRadius: ".9em",
-                          background: "#141413",
-                        }}
-                      />
-                      <span style={{ display: "flex", alignItems: "center", gap: ".28em" }}>
-                        <svg viewBox="0 0 14 10" fill="currentColor" style={{ width: ".85em", height: ".6em" }}>
-                          <rect x="0" y="6" width="2" height="4" rx=".5" />
-                          <rect x="3.5" y="4.2" width="2" height="5.8" rx=".5" />
-                          <rect x="7" y="2.2" width="2" height="7.8" rx=".5" />
-                          <rect x="10.5" y="0" width="2" height="10" rx=".5" />
-                        </svg>
-                        <svg viewBox="0 0 18 10" fill="none" style={{ width: "1.15em", height: ".64em" }}>
-                          <rect x=".6" y=".8" width="14" height="8.4" rx="2.2" stroke="currentColor" strokeWidth="1.1" opacity=".55" />
-                          <rect x="2" y="2.2" width="10.5" height="5.6" rx="1" fill="currentColor" />
-                          <path d="M16 3.6v2.8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" opacity=".55" />
-                        </svg>
-                      </span>
-                    </div>
-
-                    {/* App navigation header */}
-                    <div
-                      className="abs"
-                      style={{
-                        left: 0,
-                        right: 0,
-                        top: "2.35em",
-                        height: "3.15em",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: ".55em",
-                        padding: "0 .95em",
-                        borderBottom: "1px solid rgba(31,30,29,.09)",
-                        background: "#FAF9F5",
+                        display: "grid",
+                        placeItems: "center",
+                        width: "1.48em",
+                        height: "1.48em",
+                        borderRadius: "50%",
+                        background: "#007AFF",
+                        color: "#FFFFFF",
                       }}
                     >
                       <svg
                         viewBox="0 0 16 16"
                         fill="none"
-                        stroke="#007AFF"
-                        strokeWidth="2"
+                        stroke="currentColor"
+                        strokeWidth="1.9"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        style={{ flex: "none", width: "1em", height: "1em" }}
+                        style={{ flex: "none", width: ".75em", height: ".75em" }}
                       >
-                        <path d="M10 3 5 8l5 5" />
+                        <path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" />
                       </svg>
-                      <BrandMarkAvatar size="1.8em" radius=".5em" />
-                      <span style={{ display: "flex", flexDirection: "column", lineHeight: 1.2 }}>
-                        <span style={{ fontSize: ".88em", fontWeight: 600 }}>Reflex</span>
-                        <span style={{ fontSize: ".68em", color: "#6B6A64" }}>
-                          Text · +1 (555) 010-0199
-                        </span>
-                      </span>
-                    </div>
-
-                    {/* Chat bubbles */}
-                    <div
-                      className="abs x-q"
-                      style={{
-                        right: ".85em",
-                        top: "6.8em",
-                        maxWidth: "11.5em",
-                        padding: ".6em .85em",
-                        borderRadius: "1.1em 1.1em .3em 1.1em",
-                        background: "#007AFF",
-                        color: "#FFFFFF",
-                      }}
-                    >
-                      <span className="wrap" style={{ fontSize: ".86em", whiteSpace: "normal", display: "block" }}>
-                        Any update on the Acme invoice?
-                      </span>
-                    </div>
-                    <div className="abs x-read" style={{ right: ".95em", top: "10.65em", color: "#6B6A64" }}>
-                      <span style={{ fontSize: ".66em" }}>Read 9:42 AM</span>
-                    </div>
-                    <div
-                      className="abs x-dots"
-                      style={{
-                        left: ".85em",
-                        top: "12.3em",
-                        display: "flex",
-                        gap: ".3em",
-                        padding: ".75em .9em",
-                        borderRadius: "1.1em 1.1em 1.1em .3em",
-                        background: "#F0EEE6",
-                      }}
-                    >
-                      <span className="t-dot" style={{ width: ".4em", height: ".4em", borderRadius: "50%", background: "#9C9A92", animationDelay: "0s" }} />
-                      <span className="t-dot" style={{ width: ".4em", height: ".4em", borderRadius: "50%", background: "#9C9A92", animationDelay: ".15s" }} />
-                      <span className="t-dot" style={{ width: ".4em", height: ".4em", borderRadius: "50%", background: "#9C9A92", animationDelay: ".3s" }} />
-                    </div>
-                    <div
-                      className="abs x-a"
-                      style={{
-                        left: ".85em",
-                        top: "12.3em",
-                        maxWidth: "12em",
-                        padding: ".6em .85em",
-                        borderRadius: "1.1em 1.1em 1.1em .3em",
-                        background: "#F0EEE6",
-                      }}
-                    >
-                      <span className="wrap" style={{ fontSize: ".86em", whiteSpace: "normal", display: "block" }}>
-                        Told Acme it&apos;s on hold. They&apos;ll resend by Friday.
-                      </span>
-                    </div>
-
-                    {/* Input bar + Home indicator */}
-                    <div
-                      className="abs"
-                      style={{
-                        left: ".8em",
-                        right: ".8em",
-                        bottom: "1.4em",
-                        height: "2.35em",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        padding: "0 .32em 0 .9em",
-                        border: "1px solid rgba(31,30,29,.14)",
-                        borderRadius: "1.2em",
-                        background: "#FFFFFF",
-                      }}
-                    >
-                      <span style={{ fontSize: ".8em", color: "#87867F" }}>Text message</span>
-                      <span
-                        style={{
-                          display: "grid",
-                          placeItems: "center",
-                          width: "1.7em",
-                          height: "1.7em",
-                          borderRadius: "50%",
-                          background: "#007AFF",
-                          color: "#FFFFFF",
-                        }}
-                      >
-                        <svg
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.9"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          style={{ flex: "none", width: ".85em", height: ".85em" }}
-                        >
-                          <path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" />
-                        </svg>
-                      </span>
-                    </div>
-                    <span
-                      className="abs"
-                      style={{
-                        left: "50%",
-                        bottom: ".45em",
-                        transform: "translateX(-50%)",
-                        width: "5.2em",
-                        height: ".26em",
-                        borderRadius: ".2em",
-                        background: "#141413",
-                        opacity: 0.25,
-                      }}
-                    />
+                    </span>
                   </div>
+                  <span
+                    className="abs"
+                    style={{
+                      left: "50%",
+                      bottom: ".38em",
+                      transform: "translateX(-50%)",
+                      width: "4.4em",
+                      height: ".22em",
+                      borderRadius: ".2em",
+                      background: "#141413",
+                      opacity: 0.25,
+                    }}
+                  />
                 </div>
               </div>
             )}
 
             {ch === 3 && (
               <div
-                aria-hidden="true"
                 style={{
                   position: "relative",
-                  width: "40em",
-                  height: "33.5em",
-                  margin: "0 auto",
-                  fontSize: "min(12.5px,calc(100cqw / 40))",
-                  color: "#141413",
-                  lineHeight: 1.35,
-                  textAlign: "left",
-                  pointerEvents: "none",
+                  width: "14em",
+                  height: "28em",
+                  borderRadius: "2.35em",
+                  background: "#1C1C1A",
+                  padding: ".36em",
+                  boxShadow:
+                    "0 0 0 1px rgba(255,255,255,.14) inset,0 24px 48px -20px rgba(20,20,19,.36),0 8px 18px -10px rgba(20,20,19,.2)",
                 }}
               >
+                {/* Hardware side buttons */}
+                <span className="abs" style={{ left: "-.12em", top: "4.4em", width: ".12em", height: "1.2em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
+                <span className="abs" style={{ left: "-.12em", top: "6.3em", width: ".12em", height: "1.9em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
+                <span className="abs" style={{ left: "-.12em", top: "8.7em", width: ".12em", height: "1.9em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
+                <span className="abs" style={{ right: "-.12em", top: "7em", width: ".12em", height: "2.7em", borderRadius: "0 .1em .1em 0", background: "#2E2E2B" }} />
+
+                {/* Inner screen */}
                 <div
+                  className="q-loop"
                   style={{
-                    position: "absolute",
-                    left: "50%",
-                    top: "0.15em",
-                    width: "16.6em",
-                    height: "33.2em",
-                    marginLeft: "-8.3em",
-                    borderRadius: "2.8em",
-                    background: "#1C1C1A",
-                    padding: ".42em",
-                    boxShadow:
-                      "0 0 0 1px rgba(255,255,255,.14) inset,0 28px 56px -22px rgba(20,20,19,.38),0 8px 20px -10px rgba(20,20,19,.22)",
+                    position: "relative",
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "2em",
+                    overflow: "hidden",
+                    background: "#EFECE4",
                   }}
                 >
-                  {/* Hardware side buttons */}
-                  <span className="abs" style={{ left: "-.14em", top: "5.2em", width: ".14em", height: "1.4em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
-                  <span className="abs" style={{ left: "-.14em", top: "7.4em", width: ".14em", height: "2.3em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
-                  <span className="abs" style={{ left: "-.14em", top: "10.2em", width: ".14em", height: "2.3em", borderRadius: ".1em 0 0 .1em", background: "#2E2E2B" }} />
-                  <span className="abs" style={{ right: "-.14em", top: "8.2em", width: ".14em", height: "3.2em", borderRadius: "0 .1em .1em 0", background: "#2E2E2B" }} />
-
-                  {/* Inner screen */}
+                  {/* iOS status bar + Dynamic Island */}
                   <div
-                    className="q-loop"
+                    className="abs"
                     style={{
-                      position: "relative",
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: "2.38em",
-                      overflow: "hidden",
-                      background: "#EFECE4",
+                      left: 0,
+                      right: 0,
+                      top: 0,
+                      height: "2em",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      padding: ".25em 1em 0",
+                      background: "#FAF9F5",
                     }}
                   >
-                    {/* iOS status bar + Dynamic Island */}
-                    <div
-                      className="abs"
-                      style={{
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        height: "2.35em",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        padding: ".3em 1.2em 0",
-                        background: "#FAF9F5",
-                      }}
-                    >
-                      <span style={{ fontSize: ".68em", fontWeight: 600, letterSpacing: "-.01em" }}>9:41</span>
-                      <span
-                        style={{
-                          width: "4.6em",
-                          height: "1.18em",
-                          borderRadius: ".9em",
-                          background: "#141413",
-                        }}
-                      />
-                      <span style={{ display: "flex", alignItems: "center", gap: ".28em" }}>
-                        <svg viewBox="0 0 14 10" fill="currentColor" style={{ width: ".85em", height: ".6em" }}>
-                          <rect x="0" y="6" width="2" height="4" rx=".5" />
-                          <rect x="3.5" y="4.2" width="2" height="5.8" rx=".5" />
-                          <rect x="7" y="2.2" width="2" height="7.8" rx=".5" />
-                          <rect x="10.5" y="0" width="2" height="10" rx=".5" />
-                        </svg>
-                        <svg viewBox="0 0 18 10" fill="none" style={{ width: "1.15em", height: ".64em" }}>
-                          <rect x=".6" y=".8" width="14" height="8.4" rx="2.2" stroke="currentColor" strokeWidth="1.1" opacity=".55" />
-                          <rect x="2" y="2.2" width="10.5" height="5.6" rx="1" fill="currentColor" />
-                          <path d="M16 3.6v2.8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" opacity=".55" />
-                        </svg>
-                      </span>
-                    </div>
-
-                    {/* App navigation header */}
-                    <div
-                      className="abs"
-                      style={{
-                        left: 0,
-                        right: 0,
-                        top: "2.35em",
-                        height: "3.15em",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: ".55em",
-                        padding: "0 .95em",
-                        borderBottom: "1px solid rgba(31,30,29,.09)",
-                        background: "#FAF9F5",
-                      }}
-                    >
-                      <svg
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        stroke="#3D3D3A"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        style={{ flex: "none", width: "1em", height: "1em" }}
-                      >
-                        <path d="M10 3 5 8l5 5" />
-                      </svg>
-                      <BrandMarkAvatar size="1.8em" radius=".5em" />
-                      <span style={{ display: "flex", flexDirection: "column", lineHeight: 1.2 }}>
-                        <span style={{ fontSize: ".88em", fontWeight: 600 }}>Reflex</span>
-                        <span style={{ fontSize: ".68em", color: "#4D5E38" }}>online</span>
-                      </span>
-                      <span style={{ marginLeft: "auto" }}>
-                        <BrandLogo domain="whatsapp.com" size={16} />
-                      </span>
-                    </div>
-
-                    {/* Chat bubbles */}
-                    <div
-                      className="abs q-q"
-                      style={{
-                        right: ".85em",
-                        top: "6.8em",
-                        maxWidth: "11.8em",
-                        padding: ".6em .85em .45em",
-                        borderRadius: "1em 1em .3em 1em",
-                        background: "#DDF2D1",
-                        boxShadow: "0 1px 1px rgba(20,20,19,.06)",
-                      }}
-                    >
-                      <span className="wrap" style={{ fontSize: ".86em", whiteSpace: "normal", display: "block" }}>
-                        Pull today&apos;s rate sheets please
-                      </span>
-                      <span
-                        style={{
-                          display: "flex",
-                          justifyContent: "flex-end",
-                          alignItems: "center",
-                          gap: ".25em",
-                          marginTop: ".15em",
-                          color: "#6B6A64",
-                        }}
-                      >
-                        <span style={{ fontSize: ".64em" }}>9:15</span>
-                        <span style={{ display: "grid" }}>
-                          <span className="q-t1" style={{ gridArea: "1/1", color: "#87867F" }}>
-                            <svg
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              style={{ flex: "none", width: "1.05em", height: "1.05em" }}
-                            >
-                              <path d="M1.8 8.6 4.4 11.2 9.6 4.8M7.4 10.6l.6.6 5.2-6.4" />
-                            </svg>
-                          </span>
-                          <span className="q-t2" style={{ gridArea: "1/1", color: "#3F6E9E" }}>
-                            <svg
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              style={{ flex: "none", width: "1.05em", height: "1.05em" }}
-                            >
-                              <path d="M1.8 8.6 4.4 11.2 9.6 4.8M7.4 10.6l.6.6 5.2-6.4" />
-                            </svg>
-                          </span>
-                        </span>
-                      </span>
-                    </div>
-
-                    <div
-                      className="abs q-dots"
-                      style={{
-                        left: ".85em",
-                        top: "11.5em",
-                        display: "flex",
-                        gap: ".3em",
-                        padding: ".75em .9em",
-                        borderRadius: "1em 1em 1em .3em",
-                        background: "#FFFFFF",
-                        boxShadow: "0 1px 1px rgba(20,20,19,.06)",
-                      }}
-                    >
-                      <span className="t-dot" style={{ width: ".4em", height: ".4em", borderRadius: "50%", background: "#9C9A92", animationDelay: "0s" }} />
-                      <span className="t-dot" style={{ width: ".4em", height: ".4em", borderRadius: "50%", background: "#9C9A92", animationDelay: ".15s" }} />
-                      <span className="t-dot" style={{ width: ".4em", height: ".4em", borderRadius: "50%", background: "#9C9A92", animationDelay: ".3s" }} />
-                    </div>
-
-                    <div
-                      className="abs q-a"
-                      style={{
-                        left: ".85em",
-                        top: "11.5em",
-                        maxWidth: "13.6em",
-                        padding: ".6em .8em",
-                        borderRadius: "1em 1em 1em .3em",
-                        background: "#FFFFFF",
-                        boxShadow: "0 1px 2px rgba(20,20,19,.07)",
-                      }}
-                    >
-                      <span className="wrap" style={{ fontSize: ".86em", whiteSpace: "normal", display: "block" }}>
-                        Done. 6 investor portals checked, sheet attached.
-                      </span>
-                      <div
-                        className="q-file"
-                        style={{
-                          marginTop: ".55em",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: ".5em",
-                          padding: ".5em .55em",
-                          borderRadius: ".6em",
-                          background: "#FAF9F5",
-                          border: "1px solid rgba(31,30,29,.1)",
-                        }}
-                      >
-                        <span
-                          style={{
-                            flex: "none",
-                            display: "grid",
-                            placeItems: "center",
-                            width: "1.85em",
-                            height: "1.85em",
-                            borderRadius: ".4em",
-                            background: "#E8ECE1",
-                            color: "#4D5E38",
-                          }}
-                        >
-                          <span style={{ fontSize: ".5em", fontWeight: 700 }}>XLSX</span>
-                        </span>
-                        <span style={{ display: "flex", flexDirection: "column", lineHeight: 1.25, minWidth: 0 }}>
-                          <span style={{ fontSize: ".73em", fontWeight: 600, whiteSpace: "nowrap" }}>
-                            rate-sheets-nov-19.xlsx
-                          </span>
-                          <span style={{ fontSize: ".68em", color: "#6B6A64" }}>6 portals · 42 KB</span>
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Input bar + Home indicator */}
-                    <div
-                      className="abs"
-                      style={{
-                        left: ".8em",
-                        right: ".8em",
-                        bottom: "1.4em",
-                        height: "2.35em",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        padding: "0 .9em",
-                        border: "1px solid rgba(31,30,29,.12)",
-                        borderRadius: "1.2em",
-                        background: "#FFFFFF",
-                      }}
-                    >
-                      <span style={{ fontSize: ".8em", color: "#87867F" }}>Message</span>
-                    </div>
+                    <span style={{ fontSize: ".6em", fontWeight: 600, letterSpacing: "-.01em" }}>9:41</span>
                     <span
-                      className="abs"
                       style={{
-                        left: "50%",
-                        bottom: ".45em",
-                        transform: "translateX(-50%)",
-                        width: "5.2em",
-                        height: ".26em",
-                        borderRadius: ".2em",
+                        width: "3.9em",
+                        height: "1em",
+                        borderRadius: ".8em",
                         background: "#141413",
-                        opacity: 0.25,
                       }}
                     />
+                    <span style={{ display: "flex", alignItems: "center", gap: ".24em" }}>
+                      <svg viewBox="0 0 14 10" fill="currentColor" style={{ width: ".74em", height: ".52em" }}>
+                        <rect x="0" y="6" width="2" height="4" rx=".5" />
+                        <rect x="3.5" y="4.2" width="2" height="5.8" rx=".5" />
+                        <rect x="7" y="2.2" width="2" height="7.8" rx=".5" />
+                        <rect x="10.5" y="0" width="2" height="10" rx=".5" />
+                      </svg>
+                      <svg viewBox="0 0 18 10" fill="none" style={{ width: "1em", height: ".56em" }}>
+                        <rect x=".6" y=".8" width="14" height="8.4" rx="2.2" stroke="currentColor" strokeWidth="1.1" opacity=".55" />
+                        <rect x="2" y="2.2" width="10.5" height="5.6" rx="1" fill="currentColor" />
+                        <path d="M16 3.6v2.8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" opacity=".55" />
+                      </svg>
+                    </span>
                   </div>
+
+                  {/* App navigation header */}
+                  <div
+                    className="abs"
+                    style={{
+                      left: 0,
+                      right: 0,
+                      top: "2em",
+                      height: "2.75em",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: ".45em",
+                      padding: "0 .8em",
+                      borderBottom: "1px solid rgba(31,30,29,.09)",
+                      background: "#FAF9F5",
+                    }}
+                  >
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      stroke="#3D3D3A"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      style={{ flex: "none", width: ".9em", height: ".9em" }}
+                    >
+                      <path d="M10 3 5 8l5 5" />
+                    </svg>
+                    <BrandMarkAvatar size="1.55em" radius=".44em" />
+                    <span style={{ display: "flex", flexDirection: "column", lineHeight: 1.2 }}>
+                      <span style={{ fontSize: ".78em", fontWeight: 600 }}>Reflex</span>
+                      <span style={{ fontSize: ".58em", color: "#4D5E38" }}>online</span>
+                    </span>
+                    <span style={{ marginLeft: "auto" }}>
+                      <BrandLogo domain="whatsapp.com" size={14} />
+                    </span>
+                  </div>
+
+                  {/* Chat bubbles */}
+                  <div
+                    className="abs q-q"
+                    style={{
+                      right: ".75em",
+                      top: "5.8em",
+                      maxWidth: "10em",
+                      padding: ".52em .72em .4em",
+                      borderRadius: "1em 1em .28em 1em",
+                      background: "#DDF2D1",
+                      boxShadow: "0 1px 1px rgba(20,20,19,.06)",
+                    }}
+                  >
+                    <span className="wrap" style={{ fontSize: ".76em", whiteSpace: "normal", display: "block" }}>
+                      Pull today&apos;s rate sheets please
+                    </span>
+                    <span
+                      style={{
+                        display: "flex",
+                        justifyContent: "flex-end",
+                        alignItems: "center",
+                        gap: ".22em",
+                        marginTop: ".12em",
+                        color: "#6B6A64",
+                      }}
+                    >
+                      <span style={{ fontSize: ".56em" }}>9:15</span>
+                      <span style={{ display: "grid" }}>
+                        <span className="q-t1" style={{ gridArea: "1/1", color: "#87867F" }}>
+                          <svg
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            style={{ flex: "none", width: ".92em", height: ".92em" }}
+                          >
+                            <path d="M1.8 8.6 4.4 11.2 9.6 4.8M7.4 10.6l.6.6 5.2-6.4" />
+                          </svg>
+                        </span>
+                        <span className="q-t2" style={{ gridArea: "1/1", color: "#3F6E9E" }}>
+                          <svg
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            style={{ flex: "none", width: ".92em", height: ".92em" }}
+                          >
+                            <path d="M1.8 8.6 4.4 11.2 9.6 4.8M7.4 10.6l.6.6 5.2-6.4" />
+                          </svg>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+
+                  <div
+                    className="abs q-dots"
+                    style={{
+                      left: ".75em",
+                      top: "9.8em",
+                      display: "flex",
+                      gap: ".26em",
+                      padding: ".65em .8em",
+                      borderRadius: "1em 1em 1em .28em",
+                      background: "#FFFFFF",
+                      boxShadow: "0 1px 1px rgba(20,20,19,.06)",
+                    }}
+                  >
+                    <span className="t-dot" style={{ width: ".35em", height: ".35em", borderRadius: "50%", background: "#9C9A92", animationDelay: "0s" }} />
+                    <span className="t-dot" style={{ width: ".35em", height: ".35em", borderRadius: "50%", background: "#9C9A92", animationDelay: ".15s" }} />
+                    <span className="t-dot" style={{ width: ".35em", height: ".35em", borderRadius: "50%", background: "#9C9A92", animationDelay: ".3s" }} />
+                  </div>
+
+                  <div
+                    className="abs q-a"
+                    style={{
+                      left: ".75em",
+                      top: "9.8em",
+                      maxWidth: "11.5em",
+                      padding: ".52em .68em",
+                      borderRadius: "1em 1em 1em .28em",
+                      background: "#FFFFFF",
+                      boxShadow: "0 1px 2px rgba(20,20,19,.07)",
+                    }}
+                  >
+                    <span className="wrap" style={{ fontSize: ".76em", whiteSpace: "normal", display: "block" }}>
+                      Done. 6 investor portals checked, sheet attached.
+                    </span>
+                    <div
+                      className="q-file"
+                      style={{
+                        marginTop: ".48em",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: ".42em",
+                        padding: ".42em .46em",
+                        borderRadius: ".52em",
+                        background: "#FAF9F5",
+                        border: "1px solid rgba(31,30,29,.1)",
+                      }}
+                    >
+                      <span
+                        style={{
+                          flex: "none",
+                          display: "grid",
+                          placeItems: "center",
+                          width: "1.6em",
+                          height: "1.6em",
+                          borderRadius: ".36em",
+                          background: "#E8ECE1",
+                          color: "#4D5E38",
+                        }}
+                      >
+                        <span style={{ fontSize: ".44em", fontWeight: 700 }}>XLSX</span>
+                      </span>
+                      <span style={{ display: "flex", flexDirection: "column", lineHeight: 1.25, minWidth: 0 }}>
+                        <span style={{ fontSize: ".63em", fontWeight: 600, whiteSpace: "nowrap" }}>
+                          rate-sheets-nov-19.xlsx
+                        </span>
+                        <span style={{ fontSize: ".58em", color: "#6B6A64" }}>6 portals · 42 KB</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Input bar + Home indicator */}
+                  <div
+                    className="abs"
+                    style={{
+                      left: ".7em",
+                      right: ".7em",
+                      bottom: "1.2em",
+                      height: "2.05em",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      padding: "0 .75em",
+                      border: "1px solid rgba(31,30,29,.12)",
+                      borderRadius: "1.05em",
+                      background: "#FFFFFF",
+                    }}
+                  >
+                    <span style={{ fontSize: ".7em", color: "#87867F" }}>Message</span>
+                  </div>
+                  <span
+                    className="abs"
+                    style={{
+                      left: "50%",
+                      bottom: ".38em",
+                      transform: "translateX(-50%)",
+                      width: "4.4em",
+                      height: ".22em",
+                      borderRadius: ".2em",
+                      background: "#141413",
+                      opacity: 0.25,
+                    }}
+                  />
                 </div>
               </div>
             )}
 
             {ch === 4 && (
               <div
-                aria-hidden="true"
                 style={{
                   position: "relative",
                   width: "40em",
                   height: "22em",
-                  margin: "0 auto",
-                  fontSize: "min(12.5px,calc(100cqw / 40))",
-                  color: "#141413",
-                  lineHeight: 1.35,
-                  textAlign: "left",
-                  pointerEvents: "none",
                 }}
               >
                 <div
@@ -1418,17 +1377,10 @@ export function ChannelsSection() {
 
             {ch === 5 && (
               <div
-                aria-hidden="true"
                 style={{
                   position: "relative",
                   width: "40em",
                   height: "22em",
-                  margin: "0 auto",
-                  fontSize: "min(12.5px,calc(100cqw / 40))",
-                  color: "#141413",
-                  lineHeight: 1.35,
-                  textAlign: "left",
-                  pointerEvents: "none",
                 }}
               >
                 <div
@@ -1518,6 +1470,7 @@ export function ChannelsSection() {
                 </div>
               </div>
             )}
+            </div>
           </div>
         </div>
 
